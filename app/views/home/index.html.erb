@@ -5,5 +5,5 @@
   <%= link_to 'Login', new_user_session_path %>
 
 <% else %>
-    <%= button_to "Walk Me Home", new_events_path %>
+    <%= button_to "Walk Me Home", new_event_path, method: :get %>
 <% end %>
