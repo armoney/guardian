@@ -11,11 +11,10 @@ class EventsController < ApplicationController
 
 	def create
 		@event = Event.new(user_id: current_user.id, drone_id: 1, event_status: "not connected")
-		@user = current_user
 
 		if @event.save
 			@user = current_user
-			message = "This is " + @user.first_name + " " + @user.last_name + ". Thanks for watching that I get home safely! Link to watch: http://guardian-drone.herokuapp.com/events/#{@event.id}/stream"
+			message = "This is #{@user.first_name} #{@user.last_name}. Thanks for watching that I get home safely! Link to watch: http://guardian-drone.herokuapp.com/events/#{@event.id}/stream"
 
 	 		to = @user.friends.first
 	 		client = Twilio::REST::Client.new(
