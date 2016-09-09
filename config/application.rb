@@ -1,6 +1,6 @@
 require_relative 'boot'
 
-require "dotenv"
+require "dotenv" if Rails.env.development? || Rails.env.test?
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
