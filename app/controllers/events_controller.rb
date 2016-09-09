@@ -13,6 +13,25 @@ class EventsController < ApplicationController
 		@event = Event.new(user_id: current_user.id, drone_id: 1, event_status: "not connected")
 
 		if @event.save
+			@user = current_user
+			message = "This is " + @user.first_name + " " + @user.last_name + ". Thanks for watching that I get home safely! Link to watch: http://guardian-drone.herokuapp.com/events/#{@event.id}/stream"
+
+	 		to = @user.friends.first
+	 		client = Twilio::REST::Client.new(
+	    	ENV["TWILIO_ACCOUNT_SID"],
+	    	ENV["TWILIO_AUTH_TOKEN"]
+	  	)
+	  	if client.messages.create(
+
+	    		to: @user.friends.first.phone_number,
+	    		from: "+16502156875",
+	     		body: message
+	    	)
+	    	flash[:notice] = "Message has been sent!"
+	  	else
+	    	flash[:notice] = "Error: Message did not send"
+	  	end
+
 			if request.xhr?
 				@event.update(place_id: params["place_id"])
 				render status: 200, :json => {event_id: "#{@event.id}", drone_id: "#{@event.drone.id}"}
