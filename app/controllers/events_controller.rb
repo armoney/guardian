@@ -11,6 +11,7 @@ class EventsController < ApplicationController
 
 	def create
 		@event = Event.new(user_id: current_user.id, drone_id: 1, event_status: "not connected")
+		@user = current_user
 
 		if @event.save
 			@user = current_user
