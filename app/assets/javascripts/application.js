@@ -12,7 +12,7 @@ $(document).ready(function(){
       // Jason's server
       // url: "http://172.16.51.60:3000/start",
       // Eric's server
-      url: "http://guardian.pagekite.me/start",
+      url: "https://guardian.pagekite.me/start",
       crossDomain : true
     })
     .done(function(serverResponse){
@@ -30,7 +30,7 @@ $(document).ready(function(){
   $("#home-safely").on("click", function(e){
     $.ajax({
       // Jason's server
-      url: "http://guardian.pagekite.me/end",
+      url: "https://guardian.pagekite.me/end",
       // Eric's server
       // url: "http://172.16.50.232:8080/end",
       crossDomain : true
@@ -54,7 +54,7 @@ $(document).ready(function(){
 http://guardian.pagekite.me
   $("#walk-button").on("click", function(){
     $.ajax({
-      url: "http://guardian.pagekite.me/walk",
+      url: "https://guardian.pagekite.me/walk",
       crossDomain : true
     })
     .done(function(serverResponse){
