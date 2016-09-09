@@ -16,6 +16,7 @@ $(document).ready(function(){
       crossDomain : true
     })
     .done(function(serverResponse){
+      console.log(serverResponse + "request to start drone success")
       $('#pac-input').show()
       $('.location-input').removeAttr('id')
       $('.walk-me-home').removeAttr('id')
