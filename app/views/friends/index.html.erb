@@ -1,0 +1,19 @@
+<div id="top-bar">
+  Friends
+</div>
+
+<div id="main-content">
+  <div>
+    <ul class=lists>
+      <% @friends.each do |friend| %>
+      <li><%= link_to friend.first_name + friend.last_name,  friend_path(friend) %></li>
+      <%end%>
+    </ul>
+  </div>
+</div>
+
+<div id="bottom-bar">
+  <div class=bottom-menu>
+    <%= link_to "Add", new_friend_path %>
+  </div>
+</div>
