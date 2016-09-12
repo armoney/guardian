@@ -3,6 +3,9 @@
 ## Purpose
  To create a mobile-first(only) app that utilizes a Parrot AR drone 2.0 as an API to help get you home safely.
 
+## Screenshots
+![screenshots](/screenshots.jpg "screenshots")
+
 ##App Video Demo
 https://www.youtube.com/watch?v=p9P8ZZC2AKo
  
