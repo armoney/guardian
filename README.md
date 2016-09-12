@@ -1,24 +1,29 @@
-# README
+#Guardian - DBC Final Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Purpose
+ To create a mobile-first(only) app that utilizes a Parrot AR drone 2.0 as an API to help get you home safely.
 
-Things you may want to cover:
+## Screenshots
+![screenshots](/screenshots.jpg "screenshots")
 
-* Ruby version
+##App Video Demo
+https://www.youtube.com/watch?v=p9P8ZZC2AKo
+ 
+##Team:
+* Jason Lorentzen @codejlo
+* Shawn Tuttle @ShawnTe
+* Armon Arcuri @armoney
+* Eric Booker @ericbooker12
 
-* System dependencies
+## Goals
+* Allow a user to control the drone over the internet using two servers: a Node.js backend for the drone, and Rails backend for the mobile app. 
+* Allow a user to connect a friend to the drone video stream remotely
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tech Stack
+* Rails 
+* Node.js
+* Twillio api
+* Google Maps api
+* ardrone node module to control the drone: github.com/felixge/node-ar-drone
+* node-dronestream module to stream video: github.com/bkw/node-dronestream
+* Flexbox

@@ -1,0 +1,21 @@
+<div id="top-bar">
+  Events
+</div>
+
+<div id="main-content">
+  <div>
+    <ul class=lists>
+      <% @events.each do |event| %>
+      <% date = event.created_at %>
+      <% formatted_date = date.strftime("%a %B %d") %>
+      <li><%= link_to formatted_date,  event_path(event) %></li>
+      <%end%>
+    </ul>
+  </div>
+</div>
+
+<div id="bottom-bar">
+  <div class=bottom-menu>
+    <%= link_to "Home", user_path(current_user.id) %>
+  </div>
+</div>
