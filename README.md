@@ -24,6 +24,6 @@ https://www.youtube.com/watch?v=p9P8ZZC2AKo
 * Node.js
 * Twillio api
 * Google Maps api
-* ardrone node module to control the drone: github.com/felixge/node-ar-drone
-* node-dronestream module to stream video: github.com/bkw/node-dronestream
+* ardrone node JS module to control the drone: github.com/felixge/node-ar-drone
+* node-dronestream JS module to stream video: github.com/bkw/node-dronestream
 * Flexbox
